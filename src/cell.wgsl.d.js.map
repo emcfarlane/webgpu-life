@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["life/cell.wgsl.d.ts"],
+  "sourcesContent": ["declare const _default: string;\nexport default _default;"],
+  "mappings": "AACA,IAAOA,EAAQ",
+  "names": ["cell_wgsl_d_default"]
+}

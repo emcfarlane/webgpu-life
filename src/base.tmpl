@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    {{ block "title" . }}<title>WebGPU</title>{{ end }}
+  </head>
+  <body>
+    <!-- loadScript appends JS sources to the document head. It loads scripts as asynchronous
+        modules by default, eliminating parser-blocking JavaScript. -->
+    <script>
+      function loadScript(src, mod = true) {
+        let s = document.createElement("script");
+        s.src = src;
+        if (mod) {
+          s.type = "module";
+          s.async = true;
+          s.defer = true;
+        }
+        document.head.appendChild(s);
+      }
+      loadScript("/src/life.js");
+    </script>
+    {{ template "main" . }}
+  </body>
+</html>
